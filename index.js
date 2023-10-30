@@ -7,13 +7,16 @@ const getExcelAndRender = async () => {
   const contentsElement = document.getElementsByClassName("content")[0];
   
   contentsElement.innerHTML = "";
-
+  console.log(items);
   for (let i = 0; i < items.length; i++) {
     const target = items[i];
 
     const wrapper = document.createElement("div");
     const index = document.createElement("div");
     index.innerText = target.index ? target.index : "";
+    if (index.innerText === "") {
+      break;
+    }
     index.classList.add('small')
     const op_place = document.createElement("div");
     op_place.innerText = target.op_place ? target.op_place : "";
@@ -28,6 +31,7 @@ const getExcelAndRender = async () => {
     op_sub.innerText = target.op_sub ? target.op_sub : "";
     const status = document.createElement("div");
     status.innerText = target.status ? target.status : "";
+
     if (target.status === "수술 중") {
       status.classList.add("red");
     } else if (target.status === "수술 준비") {
