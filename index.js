@@ -13,21 +13,21 @@ const getExcelAndRender = async () => {
 
     const wrapper = document.createElement("div");
     const index = document.createElement("div");
-    index.innerText = target.index;
+    index.innerText = target.index ? target.index : "";
     index.classList.add('small')
     const op_place = document.createElement("div");
-    op_place.innerText = target.op_place;
+    op_place.innerText = target.op_place ? target.op_place : "";
     const user_name = document.createElement("div");
-    user_name.innerText = target.user_name;
+    user_name.innerText = target.user_name ? target.user_name : "";
     const op_name = document.createElement("div");
-    op_name.innerText = target.op_name;
+    op_name.innerText = target.op_name ? target.op_name : "";
     op_name.classList.add("medium");
     const op_main = document.createElement("div");
-    op_main.innerText = target.op_main;
+    op_main.innerText = target.op_main ? target.op_main : "";
     const op_sub = document.createElement("div");
-    op_sub.innerText = target.op_sub;
+    op_sub.innerText = target.op_sub ? target.op_sub : "";
     const status = document.createElement("div");
-    status.innerText = target.status;
+    status.innerText = target.status ? target.status : "";
     if (target.status === "수술 중") {
       status.classList.add("red");
     } else if (target.status === "수술 준비") {
