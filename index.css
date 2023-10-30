@@ -5,13 +5,20 @@
   flex-direction: row;
 }
 
+div.small {
+  width: 50px !important;
+}
+
+div.medium {
+  width: 250px !important;
+}
 .header > div {
-  background-color: blue;
+  background-color: #016D9E;
   margin: 0.5px;
   color: white;
   width: 108px;
   text-align: center;
-  padding: 30px 0px;
+  padding: 10px 0px;
 }
 
 .content > div {
@@ -23,20 +30,35 @@
 
 .content > div > div {
   width: 108px;
-  padding: 30px 0px;
+  padding: 15px 0px;
   text-align: center;
   margin: 0.5px;
 }
 
-
-.content > div > div:nth-child(odd) {
-  background-color: green;
+.content > div > div.red {
+  color: red;
 }
 
-.content > div > div:nth-child(even) {
-  background-color: red;
+.content > div > div.yellow {
+  color: #FFB808
+}
+
+
+.content > div:nth-child(odd) > div {
+  background-color: #F1F7F7;
+}
+
+.content > div:nth-child(even) > div {
+  background-color: white;
 }
 
 .date {
+  width: calc(50px + 108px + 108px + 108px + 108px + 108px + 250px);
   text-align: right;
+  margin: 0 auto;
+}
+
+#date_text {
+  margin-top: 8px;
+  color: #016D9E;
 }
