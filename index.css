@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.header > div {
+  background-color: blue;
+  margin: 0.5px;
+  color: white;
+  width: 108px;
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.content > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.content > div > div {
+  width: 108px;
+  padding: 30px 0px;
+  text-align: center;
+  margin: 0.5px;
+}
+
+
+.content > div > div:nth-child(odd) {
+  background-color: green;
+}
+
+.content > div > div:nth-child(even) {
+  background-color: red;
+}
+
+.date {
+  text-align: right;
+}
