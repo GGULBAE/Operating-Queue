@@ -19,11 +19,11 @@ const getExcelAndRender = async () => {
     if (status === "술전") {
       children[4].style.color = "#4ec2af";
     } else if (status === "술중") {
-      // children[4].style.color = "blue";
+      
     } else if (status === "술후") {
-      // children[4].style.color = "green";
+      
     } else if (status === "처치") {
-      // children[4].style.color = "";
+      
     } else if (status === "수혈") {
       children[4].style.color = "#bf4141";
     } else if (status === "퇴예") {
@@ -71,8 +71,9 @@ const renderDate = () => {
   } 
   const hour = dateObj.getHours();
   const minute = dateObj.getMinutes() < 10 ? "0" + dateObj.getMinutes() : dateObj.getMinutes();
+  const second = dateObj.getSeconds() < 10 ? "0" + dateObj.getSeconds() : dateObj.getSeconds();
 
-  document.getElementById("hospitalized-date-text").innerHTML = `${year}년 ${month}월 ${date}일 ${date_str} ${hour}:${minute}`;
+  document.getElementById("hospitalized-date-text").innerHTML = `${year}년 ${month}월 ${date}일 ${date_str} ${hour}:${minute}:${second}`;
 }
 
 
