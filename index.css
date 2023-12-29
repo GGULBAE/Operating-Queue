@@ -136,6 +136,7 @@ div.medium {
   flex-grow: 0;
   flex-basis: auto;
   white-space: nowrap;
+  line-height: 40px;
 }
 
 .content-numbers {
