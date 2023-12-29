@@ -16,6 +16,7 @@ const getExcelAndRender = async () => {
     children[2].innerHTML = protector_name ? protector_name : "";
     children[3].innerHTML = ddx ? ddx : "";
     children[4].innerHTML = status ? status : "";
+    children[4].style.color = "black";
     if (status === "술전") {
       children[4].style.color = "#4ec2af";
     } else if (status === "술중") {
