@@ -1,3 +1,11 @@
+html, body {
+  margin: 0;
+}
+
+body {
+  margin: 0 20px;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -62,4 +70,136 @@ div.medium {
 #date_text {
   margin-top: 8px;
   color: #016D9E;
+}
+
+
+.home_btn_wrapper {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px;
+}
+
+.home_btn {
+  display: flex;
+  height: 56px;
+  background-color: rgb(0, 122, 255);
+  border-radius: 5px;
+  cursor: pointer;
+  width: 340px;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_btn > a {
+  display: block;
+  width: 340px;
+  height: 56px;
+  font-size: 16px;
+  line-height: 56px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hospitalized-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+
+.hospitalized-status-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.hospitalized-status-content-wrapper {
+  width: calc(50% - 1.5px);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hospitalized-status-content {
+  height: 40px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 32px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  white-space: nowrap;
+}
+
+.content-numbers {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+
+.content-numbers.red > div {
+  background-color: #FFE7E7;
+  color: #FF5B5B;
+}
+
+.content-numbers.blue > div {
+  background-color: #EDF1F9;
+  color: #2F5597;
+}
+
+.content-numbers.purple > div {
+  background-color: #EDE2F6;
+  color: #7132A1
+}
+.content-numbers.yellow > div {
+  background-color: #FFF2CC;
+  color: #E2AC01
+}
+
+.content-numbers.orange > div {
+  background-color: #FEE9D2;
+  color: #F5BA90
+}
+
+.content-numbers.gray > div {
+  background-color: #E7E6E6;
+  color: black
+}
+
+.hospitalized-status-content-1 {
+  width: 6%;
+}
+.hospitalized-status-content-2 {
+  width: 13%;
+  color: black !important;
+}
+.hospitalized-status-content-3 {
+  width: 11%;
+  color: black !important;
+}
+/* 23% 35% 10%  */
+.hospitalized-status-content-4 {
+  width: 32%;
+  color: black !important;
+}
+.hospitalized-status-content-5 {
+  width: 5%;
+  color: black !important;
+}
+.hospitalized-status-content-6 {
+  width: 8%;
+  color: black !important;
+}
+
+.hospitalized-status-content-7 {
+  width: calc(25% - 18px);
+  color: black !important;
 }
