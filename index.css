@@ -111,6 +111,7 @@ div.medium {
   align-items: center;
   justify-content: space-between;
   margin: 10px 0px;
+  font-weight: 700;
 }
 
 
@@ -137,6 +138,7 @@ div.medium {
   flex-basis: auto;
   white-space: nowrap;
   line-height: 40px;
+  overflow: hidden;
 }
 
 .content-numbers {
@@ -148,68 +150,90 @@ div.medium {
 
 .content-numbers.red > div {
   background-color: #FFE7E7;
+}
+
+.content-numbers.red > div.hospitalized-status-content-1 {
   color: #FF5B5B;
 }
 
 .content-numbers.blue > div {
   background-color: #EDF1F9;
+}
+.content-numbers.blue > div.hospitalized-status-content-1 {
   color: #2F5597;
 }
 
 .content-numbers.purple > div {
   background-color: #EDE2F6;
+}
+.content-numbers.purple > div.hospitalized-status-content-1 {
   color: #7132A1
 }
 .content-numbers.yellow > div {
   background-color: #FFF2CC;
+}
+.content-numbers.yellow > div.hospitalized-status-content-1 {
   color: #E2AC01
 }
 
 .content-numbers.orange > div {
   background-color: #FEE9D2;
+}
+.content-numbers.orange > div.hospitalized-status-content-1 {
   color: #F5BA90
 }
 
 .content-numbers.gray > div {
   background-color: #E7E6E6;
+}
+.content-numbers.gray > div.hospitalized-status-content-1 {
+  background-color: #E7E6E6;
   color: black
 }
 
 .hospitalized-status-content-1 {
-  width: 6%;
+  width: 8%;
+  font-weight: 700;
 }
 .hospitalized-status-content-2 {
   width: 13%;
-  color: black !important;
+  color: black;
 }
 .hospitalized-status-content-3 {
   width: 11%;
-  color: black !important;
+  color: black;
 }
 /* 23% 35% 10%  */
 .hospitalized-status-content-4 {
-  width: 32%;
-  color: black !important;
+  width: 30%;
+  color: black;
 }
 .hospitalized-status-content-5 {
   width: 5%;
-  color: black !important;
+  color: black;
 }
 .hospitalized-status-content-6 {
   width: 8%;
-  color: black !important;
+  color: black;
 }
 
 .hospitalized-status-content-7 {
   width: calc(25% - 18px);
-  color: black !important;
+  color: black;
 }
 
 
 #retire {
-  height: 40px;
-  line-height: 40px;
+  height: 38px;
+  line-height: 38px;
   color: #9f9f9f;
+  border: 1px solid #777777;
+  font-size: 14px;
+}
+
+.hospitalized-status-discharge-title {
+  margin-left: 16px;
+  font-size: 16px;
 }
 
 .hospitalized-status-discharge-black {

@@ -16,6 +16,23 @@ const getExcelAndRender = async () => {
     children[2].innerHTML = protector_name ? protector_name : "";
     children[3].innerHTML = ddx ? ddx : "";
     children[4].innerHTML = status ? status : "";
+    if (status === "술전") {
+      children[4].style.color = "#519c90";
+    } else if (status === "술중") {
+      // children[4].style.color = "blue";
+    } else if (status === "술후") {
+      // children[4].style.color = "green";
+    } else if (status === "처치") {
+      // children[4].style.color = "";
+    } else if (status === "수혈") {
+      children[4].style.color = "#bf4141";
+    } else if (status === "퇴예") {
+
+    } else if (status === "보딩") {
+
+    } else if (status === "CPR") {
+
+    }
     children[5].innerHTML = docter ? docter : "";
     children[6].innerHTML = memo ? memo : "";
   }
