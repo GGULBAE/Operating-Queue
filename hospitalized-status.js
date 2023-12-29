@@ -17,7 +17,7 @@ const getExcelAndRender = async () => {
     children[3].innerHTML = ddx ? ddx : "";
     children[4].innerHTML = status ? status : "";
     if (status === "술전") {
-      children[4].style.color = "#519c90";
+      children[4].style.color = "#4ec2af";
     } else if (status === "술중") {
       // children[4].style.color = "blue";
     } else if (status === "술후") {
