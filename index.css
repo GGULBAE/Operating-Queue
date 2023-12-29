@@ -110,7 +110,7 @@ div.medium {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 0px;
+  margin: 30px 0px 10px;
   font-weight: 700;
 }
 
@@ -225,7 +225,6 @@ div.medium {
 .hospitalized-status-content-7 {
   width: calc(25% - 12px);
   color: black;
-  font-weight: 700;
 }
 
 
