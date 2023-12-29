@@ -11,20 +11,20 @@ const getExcelAndRender = async () => {
     const target = document.getElementById(id);
     const children = target.children;
     
-    children[0].innerHTML = id;
-    children[1].innerHTML = patient_name;
-    children[2].innerHTML = protector_name;
-    children[3].innerHTML = ddx;
-    children[4].innerHTML = status;
-    children[5].innerHTML = docter;
-    children[6].innerHTML = memo;
+    children[0].innerHTML = id ? id : "";;
+    children[1].innerHTML = patient_name ? patient_name : "";
+    children[2].innerHTML = protector_name ? protector_name : "";
+    children[3].innerHTML = ddx ? ddx : "";
+    children[4].innerHTML = status ? status : "";
+    children[5].innerHTML = docter ? docter : "";
+    children[6].innerHTML = memo ? memo : "";
   }
 
   const discharge = await parser.parse(spreadsheetId, 'Discharge');
   const dischargeTarget = document.getElementById("retire");
   const dischargeTargetChildren =  dischargeTarget.children;
-  console.log(discharge);
-  dischargeTargetChildren[1].innerHTML = discharge[0].value;
+
+  dischargeTargetChildren[1].innerHTML = discharge[0].value ? discharge[0].value : "";
 }
 
 getExcelAndRender();
