@@ -204,3 +204,14 @@ div.medium {
   width: calc(25% - 18px);
   color: black !important;
 }
+
+
+#retire {
+  height: 40px;
+  line-height: 40px;
+  color: #9f9f9f;
+}
+
+.hospitalized-status-discharge-black {
+  color: black !important;
+}
