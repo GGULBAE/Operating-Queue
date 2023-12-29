@@ -125,7 +125,7 @@ div.medium {
   width: calc(50% - 1.5px);
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 
 .hospitalized-status-content {
@@ -145,7 +145,7 @@ div.medium {
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 3px;
+  gap: 2px;
 }
 
 .content-numbers.red > div {
@@ -198,28 +198,34 @@ div.medium {
 .hospitalized-status-content-2 {
   width: 13%;
   color: black;
+  font-weight: 700;
 }
 .hospitalized-status-content-3 {
   width: 11%;
   color: black;
+  font-weight: 700;
 }
 /* 23% 35% 10%  */
 .hospitalized-status-content-4 {
   width: 30%;
   color: black;
+  font-weight: 700;
 }
 .hospitalized-status-content-5 {
   width: 5%;
   color: black;
+  font-weight: 700;
 }
 .hospitalized-status-content-6 {
   width: 8%;
   color: black;
+  font-weight: 700;
 }
 
 .hospitalized-status-content-7 {
-  width: calc(25% - 18px);
+  width: calc(25% - 12px);
   color: black;
+  font-weight: 700;
 }
 
 
