@@ -38,11 +38,14 @@ const getExcelAndRender = async () => {
     children[6].innerHTML = memo ? memo : "";
   }
 
-  const discharge = await parser.parse(spreadsheetId, 'Discharge');
+  const meta = await parser.parse(spreadsheetId, 'Meta');
   const dischargeTarget = document.getElementById("retire");
   const dischargeTargetChildren =  dischargeTarget.children;
 
-  dischargeTargetChildren[1].innerHTML = discharge[0].value ? discharge[0].value : "";
+  dischargeTargetChildren[1].innerHTML = meta[0].value ? meta[0].value : "";
+
+  const noticeTarget = document.getElementById("hospitalized-notice-text");
+  noticeTarget.innerHTML = meta[1].value ? `※ ${meta[1].value} ※` : "";
 }
 
 getExcelAndRender();

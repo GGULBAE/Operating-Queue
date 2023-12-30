@@ -109,11 +109,20 @@ div.medium {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  /* justify-content: space-between; */
   margin: 30px 0px 10px;
   font-weight: 700;
+  font-size: 32px;
 }
 
+.hospitalized-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 20px;
+}
 
 .hospitalized-status-wrapper {
   display: flex;
@@ -130,7 +139,7 @@ div.medium {
 
 .hospitalized-status-content {
   height: 40px;
-  font-size: 14px;
+  font-size: 18px;
   text-align: center;
   line-height: 32px;
   flex-shrink: 0;
@@ -196,7 +205,7 @@ div.medium {
   font-weight: 700;
 }
 .hospitalized-status-content-2 {
-  width: 13%;
+  width: 11%;
   color: black;
   font-weight: 700;
 }
@@ -207,17 +216,17 @@ div.medium {
 }
 /* 23% 35% 10%  */
 .hospitalized-status-content-4 {
-  width: 30%;
+  width: 27%;
   color: black;
   font-weight: 700;
 }
 .hospitalized-status-content-5 {
-  width: 5%;
+  width: 7%;
   color: black;
   font-weight: 700;
 }
 .hospitalized-status-content-6 {
-  width: 8%;
+  width: 11%;
   color: black;
   font-weight: 700;
 }
@@ -225,9 +234,20 @@ div.medium {
 .hospitalized-status-content-7 {
   width: calc(25% - 12px);
   color: black;
+  font-size: 14px;
 }
 
+.hospitalized-notice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 20px;
+}
 
+#hospitalized-notice-text {
+  color: #BF4141
+}
 #retire {
   height: 38px;
   line-height: 38px;
@@ -243,4 +263,12 @@ div.medium {
 
 .hospitalized-status-discharge-black {
   color: black !important;
+}
+
+.column-headers > div.hospitalized-status-content {
+  background-color:#f2f2f2;
+}
+
+.column-headers > div.hospitalized-status-content-7 {
+  font-size: 18px;
 }
