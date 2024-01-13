@@ -4,7 +4,17 @@ const getExcelAndRender = async () => {
   const parser = new PublicGoogleSheetsParser();
   
   const items = await parser.parse(spreadsheetId, 'forcalc');
-
+  
+  var summarizedValues = {
+    "ICU": 0,
+    "SUR": 0,
+    "IM": 0,
+    "CAT": 0,
+    "L": 0,
+    "Q": 0
+  }
+  console.log(items);
+  
   for (let i = 0; i < items.length; i++) {
     const { id, patient_name, protector_name, ddx, status, docter, memo} = items[i];
 
@@ -36,9 +46,41 @@ const getExcelAndRender = async () => {
     }
     children[5].innerHTML = docter ? docter : "";
     children[6].innerHTML = memo ? memo : "";
+
+    if (id && id.includes("ICU") && patient_name) {
+      summarizedValues["ICU"] += 1;
+    } else if (id && id.includes("SUR") && patient_name) {
+      summarizedValues["SUR"] += 1;
+    } else if (id && id.includes("IM") && patient_name) {
+      summarizedValues["IM"] += 1;
+    } else if (id && id.includes("CAT") && patient_name) {
+      summarizedValues["CAT"] += 1;
+    } else if (id && id.includes("L") && patient_name) {
+      summarizedValues["L"] += 1;
+    } else if (id && id.includes("Q") && patient_name) {
+      summarizedValues["Q"] += 1;
+    } else {
+      // do nothing
+    }
   }
 
+  document.getElementById("hospitalized-number").innerText = 
+    summarizedValues["ICU"] + 
+    summarizedValues["SUR"] + 
+    summarizedValues["IM"] + 
+    summarizedValues["CAT"] + 
+    summarizedValues["L"] + 
+    summarizedValues["Q"];
+  document.getElementById("hospitalized-summarize-1st").innerText = `ICU ${summarizedValues["ICU"]}`
+  document.getElementById("hospitalized-summarize-2nd").innerText = `외과 ${summarizedValues["SUR"]}`
+  document.getElementById("hospitalized-summarize-3rd").innerText = `내과 ${summarizedValues["IM"]}`
+  document.getElementById("hospitalized-summarize-4th").innerText = `고양이 ${summarizedValues["CAT"]}`
+  document.getElementById("hospitalized-summarize-5th").innerText = `대형견 ${summarizedValues["L"]}`
+  document.getElementById("hospitalized-summarize-6th").innerText = `격리실 ${summarizedValues["Q"]}`
+  
+
   const meta = await parser.parse(spreadsheetId, 'Meta');
+  
   const dischargeTarget = document.getElementById("retire");
   const dischargeTargetChildren =  dischargeTarget.children;
 

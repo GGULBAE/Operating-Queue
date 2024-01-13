@@ -242,7 +242,11 @@ div.medium {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  font-size: 20px;
+  
+}
+
+.hospitalized-summarize {
+  font-size: 24px;
 }
 
 #hospitalized-notice-text {
@@ -271,4 +275,32 @@ div.medium {
 
 .column-headers > div.hospitalized-status-content-7 {
   font-size: 18px;
+}
+
+.hospitalized-summarize {
+  margin: 10px 0;
+}
+
+#hospitalized-summarize-1st {
+  color: #ef4d4d;
+}
+
+#hospitalized-summarize-2nd {
+  color: #4181a1;
+}
+
+#hospitalized-summarize-3rd {
+  color: #e2a206;
+}
+
+#hospitalized-summarize-4th {
+  color: #e78a57;
+}
+
+#hospitalized-summarize-5th {
+  color: #ad6ebb;
+}
+
+#hospitalized-summarize-6th {
+  color:#777777;
 }
